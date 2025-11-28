@@ -1,10 +1,14 @@
 # WikiExtractor
+
+This tool is a fork of the [Original Wikiextractor](https://github.com/attardi/wikiextractor).
+
+It updates the script to run with python 3.11+ by fixing outdated regex syntax.
+
 [WikiExtractor.py](http://medialab.di.unipi.it/wiki/Wikipedia_Extractor) is a Python script that extracts and cleans text from a [Wikipedia database backup dump](https://dumps.wikimedia.org/), e.g. https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2 for English.
 
 The tool is written in Python and requires Python 3 but no additional library.
 **Warning**: problems have been reported on Windows due to poor support for `StringIO` in the Python implementation on Windows.
 
-For further information, see the [Wiki](https://github.com/attardi/wikiextractor/wiki).
 
 # Wikipedia Cirrus Extractor
 
@@ -29,11 +33,7 @@ The script may be invoked directly:
 
     python -m wikiextractor.WikiExtractor <Wikipedia dump file>
 
-It can also be installed from `PyPi` by doing:
-
-    pip install wikiextractor
-
-or locally with:
+It can also be installed locally with:
 
     (sudo) python setup.py install
 
@@ -180,17 +180,3 @@ optional arguments:
 
 ## License
 The code is made available under the [GNU Affero General Public License v3.0](LICENSE). 
-
-## Reference
-If you find this code useful, please refer it in publications as:
-
-~~~
-@misc{Wikiextractor2015,
-  author = {Giusepppe Attardi},
-  title = {WikiExtractor},
-  year = {2015},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/attardi/wikiextractor}}
-}
-~~~

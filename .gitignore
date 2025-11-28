@@ -1,4 +1,8 @@
+# Test files
+*.bz2
+
 *.py[cod]
+
 
 # C extensions
 *.so
